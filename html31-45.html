@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>moula2</title>
-    
-    
-    <meta charset="UTF-8">
-    
-    <style>
+    <head>
+        <title>
+            moula2.0
+        </title>
         
+        <meta charset="UTF-8">
         
-    </style>
-</head>
-
-<!--nadfkjkaoůiefů-->
-<body>
-    <form action="#">
-        <input type="text" placeholder="napiš sem název hry" name="pole" value="zpracovani.html">
-        <input type="button" value="odešli data">
-    </form>
-</body>
+        <style>
+            .blbec { 
+                background-color: green;
+            }
+            #red-background-id {
+                background-color: red;
+            }
+            
+            .box {
+                border-style: solid;
+                border-color: black;
+                border-width: 5px;
+                text-align: center;
+            }
+            
+            .yellow-box {
+                background-color: yellow;
+                padding:20px;
+            }
+              
+            .red-box {
+                background-color: red;
+                margin: 30px;
+            }
+            
+            .green-box {
+                background-color: green;
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 30px;
+                padding-left: 40px;
+            }
+            .blue-box {
+                background-color: blue;
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+                margin-left: 40px;
+            }
+            .orange-box {
+                background-color: orange;
+                padding: 10px 20px 30px 40px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="#">
+            <input type="text" placeholder="napiš sem název hry" name="pole" value="zpracovani.html">
+            
+            <input type="button" value="odešli data">
+            <br>
+            
+            <div class="blbec">
+                
+                <input type="radio" name="jazyk" value="cestina">čeština
+                <input type="radio" name="jazyk" value="anglictina">angličtina
+                <input type="radio" name="jazyk" value="nemcina">němčina
+                <br>
+                
+                <input type="checkbox" name="barva" value="red" checked id="red-background-id">red
+                <input type="checkbox" name="barva" value="white" checked>white
+                <input type="checkbox" name="barva" value="blue">blue
+                <br>
+            
+            </div>
+        </form>
+        
+        <div class="box yellow-box">
+            
+            yellow box
+            
+            <div class="box red-box">
+                red box
+            </div>
+            
+            <div class="box green-box">
+                green box
+            </div>
+            
+            <div class="box blue-box">
+                blue box
+            </div>
+            
+            <div class="box orange-box">
+                orange box
+            </div>
+            
+        </div>
+    </body>
 </html>
