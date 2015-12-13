@@ -8,11 +8,11 @@
         <meta charset="UTF-8">
         
         <style>
-            .blbec { 
+            .green { 
                 background-color: green;
             }
             #red-background-id {
-                background-color: red;
+                background-color: red !important;
             }
             
             .box {
@@ -48,7 +48,7 @@
             }
             .orange-box {
                 background-color: orange;
-                padding: 10px 20px 30px 40px;
+                padding: 50px 100px 150px 200px;
             }
         </style>
     </head>
@@ -60,14 +60,14 @@
             <input type="button" value="odešli data">
             <br>
             
-            <div class="blbec">
+            <div class="green">
                 
-                <input type="radio" name="jazyk" value="cestina">čeština
+                <input type="radio" name="jazyk" value="cestina" checked>čeština
                 <input type="radio" name="jazyk" value="anglictina">angličtina
                 <input type="radio" name="jazyk" value="nemcina">němčina
                 <br>
                 
-                <input type="checkbox" name="barva" value="red" checked id="red-background-id">red
+                <label id="red-background-id"><input type="checkbox" name="barva" value="red">red</label>
                 <input type="checkbox" name="barva" value="white" checked>white
                 <input type="checkbox" name="barva" value="blue">blue
                 <br>
