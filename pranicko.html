@@ -12,9 +12,9 @@
             }
         
             body {
-                background-image: url("http://i.istockimg.com/file_thumbview_approve/22351203/2/stock-photo-22351203-watercolor-snowflakes-seamless-pattern.jpg");
+                /*background-image: url("http://i.istockimg.com/file_thumbview_approve/22351203/2/stock-photo-22351203-watercolor-snowflakes-seamless-pattern.jpg");
                 background-repeat: repeat;
-                padding: 10px;
+                padding: 10px;*/
             }
 
             .obal {
@@ -24,19 +24,19 @@
                 margin: 0 auto;
                 padding: 10px;
                 border-radius: 15px;
-                border: 7px solid #d13e36;
+                border: 15px solid #d13e36;
             }
 
             .nadpis {
                 display: table;
                 justify-content: center;
                 background-color: white;
-                color: #d13e36;
+                color: green;
                 margin: 0 auto;
                 padding: 10px;
                 border-radius: 15px;
                 font-family: 'Marck Script', cursive;
-                font-size: 100px;
+                font-size: 75px;
                 font-weight: bold;
             }
             .obrazek {
@@ -51,17 +51,60 @@
                 display: table;
                 justify-content: center;
                 background-color: white;
-                color: #d13e36;
+                color: green;
                 margin: 0 auto;
                 padding: 10px;
                 border-radius: 15px;
                 font-family: 'Marck Script', cursive;
                 font-size: 30px;
             }
+            #video-bg-elem {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-height: 100%;
+                min-width: 100%;
+            } 
+            .background-wrap {
+                position: fixed;
+                z-index: -1000;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+            }
             
         </style>
     </head>
     <body class="container-fluid">
+        <div class="background-wrap">
+            <video id="video-bg-elem" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+                <!--https://youtu.be/HUQeISAu1Dw?list=PLMlDuEqko7Jo-OiRp4TW9hIexhWORnEdJ-->
+                
+                <!--<source src="https://googledrive.com/host/0B434Tt3wD5AiNUtKdnEtMDdjMXM" type="video/mp4">-->
+                <!--<source src="https://od.lk/s/Nl82NzkyMTY0OV8/Snow.mp4" type="video/mp4">-->
+                <!--<source src="https://od.lk/s/Nl82ODE5ODk2N18/Snow_trees.mp4" type="video/mp4">-->
+                <!--<source src="https://od.lk/s/Nl82ODE5ODkzOV8/gold_trees.mp4" type="video/mp4">-->
+                
+                <!--<source src="https://od.lk/s/Nl82ODIwMDU4NF8/nazelenala.mp4" type="video/mp4">-->
+                
+                
+                <!--http://hex2rgba.devoth.com/-->
+                
+                <!--<source src="https://od.lk/s/Nl82ODIwMDcxMF8/hvezda.mp4" type="video/mp4">-->
+                
+                <!--<source src="https://od.lk/s/Nl82ODIwNDQ4Ml8/krajina.webm" type="video/webm">-->
+                
+                <source src="https://od.lk/s/Nl82NzkyMTY0OV8/Snow.mp4" type="video/mp4">
+                
+                
+                
+                
+                
+                Video not supported
+            </video>
+        </div>
         <div class="obal">
             <div class="nadpis">
                 <b>Весела Коледа</b>
