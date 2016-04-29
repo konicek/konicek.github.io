@@ -37,12 +37,13 @@
     var rightPressed2 = false; // výchozí stav d
     var leftPressed2 = false; // výchozí stav a
     
-    var mezera = false; // výchozí stav mezery
+    
     var enter = false; // výchozí stav enteru
     
     var zrychleni = 0.3;
     
     var interval; //smyčka po 10ms
+    var intervalRunning = false;
     
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
@@ -88,7 +89,8 @@
         ctx.font = "30px Arial";
         ctx.fillStyle = "white";
         ctx.fillText("KONEC HRY!", 150, canvas.height/2);
-        }
+        ctx.fillText("Dále stiskni ENTER.", 110, canvas.height/2 + 40);
+    }
     
     //fce pro 
     function draw() {
@@ -196,8 +198,11 @@
         }
         
         if(e.keyCode == 32) {
-            mezera = true;
-            interval = setInterval(draw, 10);
+            if (intervalRunning == false)
+            {
+                interval = setInterval(draw, 10);
+                intervalRunning = true;
+            }
         }
         
         if(e.keyCode == 13) {
@@ -228,8 +233,9 @@
     }
     
     function konecHry(){
+        clearInterval(interval);
         drawFinishGame();
-        clearInterval(draw, 10);
+        
         
         
         
