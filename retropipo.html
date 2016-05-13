@@ -17,8 +17,8 @@
         </script> 
         
         <canvas id="myCanvas1" width="900" height="180">Your browser does not support the HTML5 canvas tag.</canvas>
-        <canvas id="myCanvas" width="900" height="500">Your browser does not support the HTML5 canvas tag.</canvas>
-        <canvas id="myCanvas2" width="900" height="100">Your browser does not support the HTML5 canvas tag.</canvas>
+        <canvas id="myCanvas" style="border:10px solid rgb(153, 54, 21);" width="900" height="500" ;>Your browser does not support the HTML5 canvas tag.</canvas>
+        <canvas id="myCanvas2" width="920" height="100">Your browser does not support the HTML5 canvas tag.</canvas>
         <script>
             var myDataRef = new Firebase('https://milantest.firebaseio.com/');
             
@@ -91,11 +91,11 @@
                 ctx1.clearRect(0, 0, canvas1.width, canvas1.height); //vyčisti plátno
                 ctx1.font = "46px Courier New";
                 ctx1.fillStyle = "rgb(84, 39, 0)";
-                ctx1.fillText("Free code club uvádí", 180, 60);
+                ctx1.fillText("Free code club uvádí", 175, 60);
                 
                 ctx1.font = "bold 86px Courier New";
-                ctx1.fillStyle = "rgb(153, 54, 21)";
-                ctx1.fillText("RETRO PING PONG", 70, 150);
+                ctx1.fillStyle = "rgb(79, 38, 4)";
+                ctx1.fillText("RETRO TENNIS", 143, 150);
                 
                 
                 ctx2.clearRect(0, 0, canvas2.width, canvas2.height); //vyčisti plátno
@@ -107,11 +107,13 @@
             }
             
             function drawGameOver(hrac) {
-                ctx2.clearRect(0, 0, canvas.width, canvas.height); //vyčisti plátno
+                ctx2.clearRect(0, 0, canvas2.width, canvas2.height); //vyčisti plátno
+                ctx2.font = "40px Courier New";
+                ctx2.fillStyle = "white";
+                ctx2.fillText("Vyhrál " + hrac + "!", 235, 50);
                 ctx2.font = "20px Courier New";
                 ctx2.fillStyle = "white";
-                ctx2.fillText("Vyhrál " + hrac, 10, 30);
-                ctx2.fillText("Stiskni M pro obnovení stránky.", 10, 60);
+                ctx2.fillText("Stiskni M pro obnovení stránky.", 275, 90);
             }
             
             function drawScore() {
@@ -119,7 +121,7 @@
                 ctx2.font = "40px Courier New";
                 ctx2.fillStyle = "white";
                 ctx2.fillText("horní hráč: " + scoreUpperPlayer, 10, 40);
-                ctx2.fillText("spodní hráč: " + scoreBottomPlayer, 650, 40);
+                ctx2.fillText("dolní hráč: " + scoreBottomPlayer, 590, 40);
             }
             
             function drawInfoOld(db) {
@@ -154,10 +156,10 @@
                 var info3 = " úhel Dopadu: " + Math.round(uhelDopadu);
                 var info4 = " úhel Odrazu: " + Math.round(uhelOdrazu);
                 
-                ctx2.font = "20px Arial";
-                ctx2.fillStyle = "yellow";
+                ctx2.font = "20px Courier New";
+                ctx2.fillStyle = "white";
                 
-                ctx2.fillText("rychlost míčku: " + (Math.round(speed * 10 ) / 10).toFixed(1), 400, 85);
+                ctx2.fillText("rychlost míčku: " + (Math.round(speed * 10 ) / 10).toFixed(1), 340, 85);
             }
             
             //fce pro nakreslení míčku
@@ -181,7 +183,7 @@
                 ctx.lineTo(paddleX + paddleWidth - a1, canvas.height - paddleDistance - b);
                 
                 ctx.lineWidth = 20;
-                ctx.strokeStyle = "yellow";
+                ctx.strokeStyle = "rgb(51,106,128)";
                 ctx.stroke();
             }
             
@@ -196,7 +198,7 @@
                 ctx.lineTo(paddle2X + paddleWidth - a1, paddleDistance - b);
                 
                 ctx.lineWidth = 20;
-                ctx.strokeStyle = "yellow";
+                ctx.strokeStyle = "rgb(148,45,1)";
                 ctx.stroke();
             }
             
@@ -260,7 +262,7 @@
                         if (scoreBottomPlayer == 3)
                         {
                             clearInterval(interval);
-                            drawGameOver("spodní hráč");
+                            drawGameOver("dolní hráč");
                         }
                     }
                 }
