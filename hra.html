@@ -31,19 +31,20 @@
     var paddleX = (canvas.width-paddleWidth)/2;//počáteční poloha pálky1 na ose X
     var paddleX2 = (canvas.width-paddleWidth)/2;//počáteční poloha pálky2 na ose X
     
+    var paddleDistance = 25;
+    
     var rightPressed = false; // výchozí stav pravé šipky
     var leftPressed = false; // výchozí stav levé šipky
     
     var rightPressed2 = false; // výchozí stav d
     var leftPressed2 = false; // výchozí stav a
     
-    
+    var mezera = false; // výchozí stav mezery
     var enter = false; // výchozí stav enteru
     
     var zrychleni = 0.3;
     
     var interval; //smyčka po 10ms
-    var intervalRunning = false;
     
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
@@ -62,12 +63,26 @@
     
     
     //fce pro nakreslení pálky
-    function drawPaddle() {
+    function drawPaddle(angle) {
+        // ctx.beginPath();
+        // ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+        // ctx.fillStyle = "#0095DD";
+        // ctx.fill();
+        // ctx.closePath();
+        
+        var a = paddleWidth/2 * Math.cos(angle);
+        var b = paddleWidth/2 * Math.sin(angle);
+        var a1 = paddleWidth/2 - a;
+        
         ctx.beginPath();
-        ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
+        //ctx.moveTo(paddleX, canvas.height-paddleHeight);
+        
+        ctx.moveTo(paddleX + a1, canvas.height - paddleDistance + b);
+        ctx.lineTo(paddleX + paddleWidth - a1, canvas.height - paddleDistance - b);
+        
+        ctx.lineWidth = 20;
+        ctx.strokeStyle = "yellow";
+        ctx.stroke();
     }
     
     //fce pro nakreslení pálky
@@ -82,16 +97,14 @@
     function drawStartGame() {
         ctx.font = "30px Arial";
         ctx.fillStyle = "white";
-        //ctx.fillText("Stiskni mezerník pro START.", 50, canvas.height/2);
-        ctx.fillText("Theo, stiskni mezerník, moulo!", 45, canvas.height/2);
+        ctx.fillText("Stiskni mezerník pro START.", 50, canvas.height/2);
         }
         
     function drawFinishGame() {
         ctx.font = "30px Arial";
         ctx.fillStyle = "white";
         ctx.fillText("KONEC HRY!", 150, canvas.height/2);
-        ctx.fillText("Dále stiskni ENTER.", 110, canvas.height/2 + 40);
-    }
+        }
     
     //fce pro 
     function draw() {
@@ -199,11 +212,8 @@
         }
         
         if(e.keyCode == 32) {
-            if (intervalRunning == false)
-            {
-                interval = setInterval(draw, 10);
-                intervalRunning = true;
-            }
+            mezera = true;
+            interval = setInterval(draw, 10);
         }
         
         if(e.keyCode == 13) {
@@ -234,9 +244,8 @@
     }
     
     function konecHry(){
-        clearInterval(interval);
         drawFinishGame();
-        
+        clearInterval(draw, 10);
         
         
         
