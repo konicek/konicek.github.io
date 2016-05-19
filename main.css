@@ -1,9 +1,10 @@
 * { padding: 0; margin: 10; }
 #myCanvas1 { display: block; margin: 0 auto; }
-#myCanvas { background: #088A4B; display: block; margin: 0 auto; }
-#myCanvas2 { background: black; display: block; margin: 0 auto; }
+#myCanvas { /*background: no-repeat url("http://wallpapercanyon.com/wp-content/uploads/2016/01/Retro-Wallpaper-22.jpg");*/background: rgba(115,141,54,0.6); display: block; margin: 0 auto; }
+#myCanvas2 { background: rgba(0,0,0,0.5); display: block; margin: 0 auto; }
+
 body {
-    background: url("https://dl.dropboxusercontent.com/s/vz3tt72y6yiy8kz/kulicky.jpg?dl=0") no-repeat center;
+    background: url("https://newevolutiondesigns.com/images/freebies/retro-wallpaper-1.jpg") no-repeat center;
     background-size: 100%, 100%;
     
 }
