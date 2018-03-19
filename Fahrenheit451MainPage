@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>
+			fahrenheit.cz/main_page
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	</head>
+	<body bgcolor="white" link="black" alink="black" vlink="black">
+
+		<table width="100%" align="center">
+			<tr>
+				<td align="center">
+					<img src="http://jyxo.info/uploads/3B/3be8fa882ba22aa037e1c55b4d3005b6556f9006.jpg" width="60%">
+				</td>
+			</tr>
+		</table>
+
+		<table width="100%" align="center">
+			<tr>
+				<td align="center">
+					<font face="Orbitron" size="9">
+						<b>Fahrenheit 451</b>
+					</font>
+				</td>
+			</tr>
+		</table>
+
+		<font face="Open Sans">
+			<table width="60%" align="center">
+				<tr align="center">
+					<td>
+						<a href="fahrenheitAuthor.html">
+							AUTHOR
+						</a>
+						 / 
+						<a href="fahrenheitPlot.html">
+							PLOT
+						</a>
+						 / 
+						<a href="fahrenheitCharacters.html">
+							CHARACTERS
+						</a>						
+					</td>
+				</tr>
+			</table>
+		</font>
+		<br>
+		<br>
+		<br>
+ 
+		<table width="60%" align="center">
+			<tr>
+				<td>
+					<font face="Open Sans" size="3">
+						<img src="http://jyxo.info/uploads/61/6119ef2b3b2a2e2d5d302f6c6aead7039bb348df.jpg" width="35%" style="float: right">
+						Fahrenheit 451 is a dystopian novel by American writer Ray Bradbury, published in 1953. It is regarded as one of his best works. The novel presents a future American society where books are outlawed and "firemen" burn any that are found. The book's tagline explains the title: "Fahrenheit 451 – the temperature at which book paper catches fire, and burns..." The lead character is a fireman named Montag who becomes disillusioned with the role of censoring works and destroying knowledge, eventually quitting his job and joining a resistance group who memorize and share the world's greatest literary and cultural works.
+						<br>
+						The novel has been the subject of interpretations focusing on the historical role of book burning in suppressing dissenting ideas. In a 1956 radio interview, Bradbury stated that he wrote Fahrenheit 451 because of his concerns at the time (during the McCarthy era) about the threat of book burning in the United States. In later years, he described the book as a commentary on how mass media reduces interest in reading literature.
+						<br>
+						In 1954, Fahrenheit 451 won the American Academy of Arts and Letters Award in Literature and the Commonwealth Club of California Gold Medal. It has since won the Prometheus "Hall of Fame" Award in 1984 and a 1954 "Retro" Hugo Award, one of only five Best Novel Retro Hugos ever given, in 2004. Bradbury was honored with a Spoken Word Grammy nomination for his 1976 audiobook version.
+						<br>
+						Adaptations include François Truffaut's 1966 film adaptation of the novel and a 1982 BBC Radio dramatization. Bradbury published a stage play version in 1979 and helped develop a 1984 interactive fiction computer game titled Fahrenheit 451, and a collection of his short stories, A Pleasure to Burn.
+						<br>
+						HBO is set to release a television film based on the novel in 2018.
+					</font>
+				</td>				
+			</tr>
+		</table>
+		<br>
+		<br>		
+
+		<table width="60%" align="center">
+			<tr>
+				<td>
+					<img src="office.jpg" width="100%">
+				</td>
+			</tr>
+		</table>
+		<br>
+
+		<img src="dole.jpg" width="100%">
+
+	</body>
+</html>
